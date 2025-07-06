@@ -62,14 +62,10 @@ catch(err){
      
       </div>
       <ul className='flex gap-10 items-center'>
-       {Data.TotalAmount&&(   <li  className="text-black text-center font-semibold text-sm  bg-[#49E589] mt-10 \ items-center rounded-2xl p-3 w-[10vw] mx-auto">You: {parseFloat(parseInt(Data.TotalAmount[TotalAmountLength])/Members)}</li>
+       {Data.TotalAmount&&(   <li  className="text-black text-center font-semibold text-sm  bg-[#49E589] mt-10 \ items-center rounded-2xl p-3 w-[10vw] mx-auto">Per Head: {parseFloat(parseInt(Data.TotalAmount[TotalAmountLength])/Members)}</li>
        )}
-    {Data && Array.isArray(Data.FriendsJoined) && (
-                    Data.FriendsJoined.map((e, index) => {
-                     
-                        <li key={index} className="text-center text-black font-semibold text-sm  bg-[#49E589] mt-10  items-center rounded-2xl p-3 w-[10vw] mx-auto">{e}: {parseFloat(parseInt(Data.TotalAmount[TotalAmountLength])/Members)}</li>
-})
-                )}
+           
+   
                 
                 </ul>
                 <p className= ' text-center text-black font-semibold text-sm  bg-[#49E589] mt-10  items-center rounded-2xl p-3 w-[10vw] mx-auto' onClick={settle}>Settle Up</p>

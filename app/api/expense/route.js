@@ -50,7 +50,7 @@ let total=parseInt(amount);
       }else{
        
        const updated2=await UserModel.findByIdAndUpdate(id,{
-        $push:{[`GroupsJoined.${i}.TotalAmount`]:{amount}}
+        $push:{[`GroupsJoined.${i}.TotalAmount`]:amount}
     })
     for(let i=0;i<friends.length;i++)
     {
